@@ -11,7 +11,6 @@
 
 - Typescript
 
-
 # v2.0.0
 
 - Switched from less to tailwindcss

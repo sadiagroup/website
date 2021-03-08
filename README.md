@@ -2,16 +2,15 @@
 
 ![](https://img.shields.io/badge/version-2.1.2-green.svg) ![](https://img.shields.io/badge/License-MIT-orange.svg)
 
-
 Elemental is a portfolio template suitable for artists, photographers, designers etc. With the starter you can create blog, portfolio and miscellaneous posts (such as privacy-policy).
 
-**[Live Demo](https://elemental.netlify.app)** 
+**[Live Demo](https://elemental.netlify.app)**
 
 ## Getting Started.
 
 You will need node and [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) installed.
 
-Start the project by 
+Start the project by
 
 ```
 gatsby new project-name https://github.com/akzhy/gatsby-starter-elemental
@@ -33,81 +32,84 @@ Almost all features of this starter are editable. In order to personalize, open 
 // Do not remove any of the properties below.
 
 const siteMetadata = {
-    title: `Elemental`, // Title of your webpage
-    siteUrl: `http://localhost`, // You sites URL
-    capitalizeTitleOnHome: true, // Whether to capitalize the letter on homepage
-    logo: `/images/logo.png`, // Logo 
-    icon: `/images/icon.png`, // Favicon, shown in the browsers "tab"
-    titleImage: `/images/wall.jpg`, // The main title is filled with an image.
-    ogImage: `/images/wall.png`, // open graph image (shown when link is shared in social media)
-    twoColumnWall: true, // If true, the wall will be split into two with titleImage on left side and text on the right. If false, the title image will be used as the background of the text.
-    about:"", // The short about text shown on front page
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`, // Intro tag shown below title
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-    author: `@_akzhy`, // Author
-    blogItemsPerPage: 10,
-    portfolioItemsPerPage: 10,
-    darkmode: true, // Whether to enable the darkmode by default. Change to false if you want the light mode
-    switchTheme: true, // Whether to show a switch theme button on the navbar
-    // The links shown on the navbar and footer, follow the same structure to add or remove more items.
-    navLinks: [{
-            name: "HOME",
-            url: "/"
-        },
-        {
-            name: "ABOUT",
-            url: "/about"
-        },
-        {
-            name: "BLOG",
-            url: "/blog"
-        },
-        {
-            name: "PORTFOLIO",
-            url: "/portfolio"
-        },
-        {
-            name: "CONTACT",
-            url: "/contact"
-        }
-    ],
-    // Same as navbar links, except these are shown on the footer
-    footerLinks: [{
-        name: "PRIVACY POLICY",
-        url: "/privacy-policy"
-    }],
-    // Your social profile links. The icons of the given social medias are available in the static folder. If you are adding a new item, include the icon in the static/images folder.
-    social: [{
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#"
-        },
-        {
-            name: "Twitter",
-            icon: "/images/Twitter.svg",
-            url: "#"
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "#"
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "#"
-        }
-    ],
-    contact: {
-        api_url: "https://getform.io/f/f227a36xxxxxx", // leave empty ('') or false to hide form
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation"
+  title: `Elemental`, // Title of your webpage
+  siteUrl: `http://localhost`, // You sites URL
+  capitalizeTitleOnHome: true, // Whether to capitalize the letter on homepage
+  logo: `/images/logo.png`, // Logo
+  icon: `/images/icon.png`, // Favicon, shown in the browsers "tab"
+  titleImage: `/images/wall.jpg`, // The main title is filled with an image.
+  ogImage: `/images/wall.png`, // open graph image (shown when link is shared in social media)
+  twoColumnWall: true, // If true, the wall will be split into two with titleImage on left side and text on the right. If false, the title image will be used as the background of the text.
+  about: '', // The short about text shown on front page
+  introTag: `PHOTOGRAPHER | VIDEOGRAPHER`, // Intro tag shown below title
+  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+  author: `@_akzhy`, // Author
+  blogItemsPerPage: 10,
+  portfolioItemsPerPage: 10,
+  darkmode: true, // Whether to enable the darkmode by default. Change to false if you want the light mode
+  switchTheme: true, // Whether to show a switch theme button on the navbar
+  // The links shown on the navbar and footer, follow the same structure to add or remove more items.
+  navLinks: [
+    {
+      name: 'HOME',
+      url: '/',
     },
-    disqus: `your-disqus-shortname`  // Optional, remove this if you don't use disqus
+    {
+      name: 'ABOUT',
+      url: '/about',
+    },
+    {
+      name: 'BLOG',
+      url: '/blog',
+    },
+    {
+      name: 'PORTFOLIO',
+      url: '/portfolio',
+    },
+    {
+      name: 'CONTACT',
+      url: '/contact',
+    },
+  ],
+  // Same as navbar links, except these are shown on the footer
+  footerLinks: [
+    {
+      name: 'PRIVACY POLICY',
+      url: '/privacy-policy',
+    },
+  ],
+  // Your social profile links. The icons of the given social medias are available in the static folder. If you are adding a new item, include the icon in the static/images folder.
+  social: [
+    {
+      name: 'Facebook',
+      icon: '/images/Facebook.svg',
+      url: '#',
+    },
+    {
+      name: 'Twitter',
+      icon: '/images/Twitter.svg',
+      url: '#',
+    },
+    {
+      name: 'Instagram',
+      icon: '/images/Instagram.svg',
+      url: '#',
+    },
+    {
+      name: 'Youtube',
+      icon: '/images/Youtube.svg',
+      url: '#',
+    },
+  ],
+  contact: {
+    api_url: 'https://getform.io/f/f227a36xxxxxx', // leave empty ('') or false to hide form
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    mail: 'hi@akzhy.com',
+    phone: '000-000-0000',
+    address: '1234 \nLocation \nLocation',
+  },
+  disqus: `your-disqus-shortname`, // Optional, remove this if you don't use disqus
 }
-
 ```
 
 #### Creating new blog posts.
@@ -122,7 +124,7 @@ title: Title of your post
 date: 2019-06-29 <-- Date should be in the given format
 image: ./image.jpg <-- Image shown on the list pages and also used as open graph image
 banner: ./banner.jpg <-- Banner shown in the blog post
-description: The description shown in the listing page. Also used for SEO description. 
+description: The description shown in the listing page. Also used for SEO description.
 ---
 ```
 
@@ -139,8 +141,8 @@ The frontmatter should be of the below structure
 title: Title of your post
 date: 2019-06-29 <-- Date should be in the given format
 banner: ./banner.jpg <-- Banner shown in the portfolio post and also used as open graph image
-image: ./image.jpg <-- Image shown on the list pages 
-description: The description shown in the listing page. Also used for SEO description. 
+image: ./image.jpg <-- Image shown on the list pages
+description: The description shown in the listing page. Also used for SEO description.
 ---
 ```
 
@@ -174,7 +176,7 @@ The frontmatter should be of the below structure
 ---
 title: Title of your post
 image: ./image.jpg <-- Image  used as open graph image
-description: The description used for SEO. 
+description: The description used for SEO.
 ---
 ```
 
@@ -184,7 +186,7 @@ The contact form will appear only if you have provided an api url. You can contr
 
 To customize these functions, edit the `config.js` file.
 
-The `beforeContactFormSubmit` function is used to validate the form data before it is sent to the server. It has one argument that contains the object 
+The `beforeContactFormSubmit` function is used to validate the form data before it is sent to the server. It has one argument that contains the object
 
 ```
 {
@@ -194,7 +196,8 @@ The `beforeContactFormSubmit` function is used to validate the form data before 
 }
 ```
 
-You can validate the data and return 
+You can validate the data and return
+
 ```
 {
     data: {
@@ -205,7 +208,8 @@ You can validate the data and return
     result: true,
 }
 ```
-if the data is valid. Otherwise return 
+
+if the data is valid. Otherwise return
 
 ```
 errors = [
@@ -228,6 +232,7 @@ return {
 ```
 
 You can also handle how data is sent to the server by editing the `contactFormSubmit` function. It should return the below object to indicate whether the message was sent.
+
 ```
 {
     result: boolean // true for success, false for fail
@@ -237,8 +242,3 @@ You can also handle how data is sent to the server by editing the `contactFormSu
 ## Contributing
 
 Any kind of contributions are welcome. Bump the version and create a PR.
-
-
-
-
-
