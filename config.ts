@@ -1,168 +1,182 @@
 const siteMetadata = {
-    title: `Elemental`,
-    siteUrl: `http://localhost`,
-    capitalizeTitleOnHome: false,
-    logo: `/images/logo.png`,
-    icon: `/images/icon.png`,
-    titleImage: `/images/wall.png`,
-    ogImage: `/images/wall.png`,
-    twoColumnWall: true,
-    cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-    about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
-    blogItemsPerPage: 10,
-    portfolioItemsPerPage: 10,
-    darkmode: true,
-    switchTheme: true,
-    navLinks: [
-        {
-            name: "HOME",
-            url: "/",
-        },
-        {
-            name: "ABOUT",
-            url: "/about",
-        },
-        {
-            name: "BLOG",
-            url: "/blog",
-        },
-        {
-            name: "PORTFOLIO",
-            url: "/portfolio",
-        },
-        {
-            name: "CONTACT",
-            url: "/contact",
-        },
-    ],
-    footerLinks: [
-        {
-            name: "PRIVACY POLICY",
-            url: "/privacy-policy",
-        },
-        {
-            name: "GitHub",
-            url: "https://github.com/akzhy/gatsby-starter-elemental",
-        },
-    ],
-    social: [
-        {
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#",
-        },
-        {
-            name: "Twitter",
-            icon: "/images/Twitter.svg",
-            url: "#",
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "#",
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "#",
-        },
-    ],
-    contact: {
-        // leave empty ('') or false to hide form
-        api_url: "https://getform.io/f/f227a36e-096a-4c6a-9963-9f1918a85bb3",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation",
-    },
-    disqus: "elemental-netlify-com",
+  title: `Sadia Textile Mills Ltd.`,
+  siteUrl: `https://www.sadiatextile.com`,
+  capitalizeTitleOnHome: false,
+  logo: `/images/logo.png`,
+  icon: `/images/icon.png`,
+  titleImage: `/images/wall.png`,
+  ogImage: `/images/wall.png`,
+  twoColumnWall: true,
+  cookiePolicy: true,
+  introTag: `100% Export oriented fabric manufacturer & exporter`,
+  description: `We are a 100% export-oriented group of companies focused on delivering best quality woven and shell fabric at the best market price. We work hard to deliver products according to our client’s demands. Our products consist of Pocketing, Lining, Inner Waist Band fabric as well as Shell Fabrics.<br />Our companies are:
+  <ul>
+    <li>Sadia Textile Mills Limited</li>
+    <li>Parisha Textile Mills Limited</li>
+    <li>Aqib Textile Mills Limited</li>
+    <li>Apan Textile Mills Limited</li>
+  </ul>
+  `,
+  about:`
+      Sadia Textile Mills Ltd. is one of the leading manufacturers & exporters of fabrics in Bangladesh. We are interested to provide the best quality of fabrics with affordable price to our buyers, including international buying houses, buyer offices, liaison offices, garments, and related companies.
+
+      We started our journey in 2010 and have grown steadily ever since. Sadia Textile Mills Ltd. now offers the complete range of trim fabrics. We have always produced and supplied the highest international standards in quality of fabrics. As regards to environmental, health & safety management, we provide customers AZO, APEO, Formaldehyde, pH & others hazardous chemical free fabrics in local and international markets.
+
+      Sadia Textile Mills Ltd. is committed to face the global challenge and to that end in view BMRE is almost a continual phenomenon. As per the requirements and constraints of H&M, we regularly execute speed orders and super-speed orders gracefully. We keep a stock of 25 lac yards of different types of gray fabric and 3 lac yards of dying-processed fabric for these quick-delivery purpose.
+
+      We are looking forward to hearing your favorable response. In the meantime, if you need any more information, please feel free contact with us.
+    `,
+  mission: 'Our mission is to deliver our clients the finest quality product while maintaining all the international standards required by them.',
+  vision: 'Our vision is to provide a holistic support to our clients’ needs while maintaining environment friendly business at all times. ',
+  author: `@maacpiash`,
+  blogItemsPerPage: 10,
+  portfolioItemsPerPage: 10,
+  darkmode: false,
+  switchTheme: true,
+  navLinks: [
+      {
+          name: "HOME",
+          url: "/",
+      },
+      {
+          name: "ABOUT US",
+          url: "/about",
+      },
+      {
+          name: "OUR BUSINESSES",
+          url: "/businesses",
+      },
+      {
+          name: "OUR PRODUCTS",
+          url: "/products",
+      },
+      {
+          name: "CERTIFICATIONS",
+          url: "/certifications",
+      },
+      {
+          name: "CLIENTS",
+          url: "/clients",
+      },
+      {
+          name: "SUSTAINABILITY",
+          url: "/sustainability",
+      },
+  ],
+  footerLinks: [
+      {
+          name: "PRIVACY POLICY",
+          url: "/privacy-policy",
+      },
+      {
+          name: "WEBSITE SOURCE",
+          url: "https://github.com/sadiatextile/website",
+      },
+  ],
+  social: [
+      {
+          name: "Facebook",
+          icon: "/images/Facebook.svg",
+          url: "https://www.facebook.com/sadiagroupofindustries",
+      },
+      {
+          name: "LinkedIn",
+          icon: "/images/LinkedIn.svg",
+          url: "#",
+      },
+  ],
+  contact: {
+      // leave empty ('') or false to hide form
+      api_url: "https://getform.io/f/65608587-3d12-4d4c-9273-d27a8f5720f9",
+      description: `If you have a question or comment, feel free to leave here!`,
+      mail: "info@sadiatextile.com",
+      phone: "+8801714100878",
+      address: "House 6, Road 13, Sector 7, Uttara, Dhaka 1230, Bangladesh",
+  },
+  disqus: "elemental-netlify-com",
 }
 
 const beforeContactFormSubmit = data => {
-    // Code 0 - success
-    // Code 1 - Name
-    // Code 2 - Email
-    // Code 3 - Message
-    // Code 4 - Other
-    const errors = []
+  // Code 0 - success
+  // Code 1 - Name
+  // Code 2 - Email
+  // Code 3 - Message
+  // Code 4 - Other
+  const errors = []
 
-    if (data.name.trim().length < 2) {
-        errors.push({
-            code: 1,
-            message: "Enter a name",
-        })
-    }
+  if (data.name.trim().length < 2) {
+      errors.push({
+          code: 1,
+          message: "Enter a name",
+      })
+  }
 
-    if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
-        errors.push({
-            code: 2,
-            message: "Enter a valid email address",
-        })
-    }
+  if (!data.email.match(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/)) {
+      errors.push({
+          code: 2,
+          message: "Enter a valid email address",
+      })
+  }
 
-    if (data.message.trim().length < 15) {
-        errors.push({
-            code: 3,
-            message: "Enter a message with atleast 15 characters",
-        })
-    }
+  if (data.message.trim().length < 15) {
+      errors.push({
+          code: 3,
+          message: "Enter a message with atleast 15 characters",
+      })
+  }
 
-    if (errors.length > 0)
-        return {
-            result: false,
-            errors: errors,
-        }
+  if (errors.length > 0)
+      return {
+          result: false,
+          errors: errors,
+      }
 
-    return {
-        data: {
-            name: data.name,
-            email: data.email,
-            message: data.message,
-        },
-        result: true,
-    }
+  return {
+      data: {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+      },
+      result: true,
+  }
 }
 
 const contactFormSubmit = async (api, data) => {
-    let res: any = await fetch(api, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-    })
+  let res: any = await fetch(api, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+      },
+  })
 
-    res = await res.json()
+  res = await res.json()
 
-    if (res.success) {
-        return {
-            result: true,
-        }
-    }
-    return {
-        result: false,
-        ...res,
-    }
+  if (res.success) {
+      return {
+          result: true,
+      }
+  }
+  return {
+      result: false,
+      ...res,
+  }
 }
 
 const defaults = {
-    disqus: null,
-    twoColumnWall: true,
-    darkmode: false,
-    switchTheme: true,
-    capitalizeTitleOnHome: true,
-    cookiePolicy: false
+  disqus: null,
+  twoColumnWall: true,
+  darkmode: false,
+  switchTheme: true,
+  capitalizeTitleOnHome: true,
+  cookiePolicy: false
 }
 
 Object.keys(defaults).forEach(item => {
-    if (siteMetadata[item] === undefined) {
-        siteMetadata[item] = defaults[item]
-    }
+  if (siteMetadata[item] === undefined) {
+      siteMetadata[item] = defaults[item]
+  }
 })
 
 export { siteMetadata, beforeContactFormSubmit, contactFormSubmit }
