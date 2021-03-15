@@ -3802,6 +3802,16 @@
               "defaultValue": null
             },
             {
+              "name": "address",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
               "name": "template",
               "description": "",
               "type": {
@@ -8794,6 +8804,18 @@
               "deprecationReason": null
             },
             {
+              "name": "address",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "template",
               "description": null,
               "args": [],
@@ -10829,6 +10851,12 @@
               "deprecationReason": null
             },
             {
+              "name": "childrenMdx___frontmatter___address",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "childrenMdx___frontmatter___template",
               "description": null,
               "isDeprecated": false,
@@ -11634,6 +11662,12 @@
             },
             {
               "name": "childMdx___frontmatter___description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "childMdx___frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -23460,6 +23494,12 @@
             },
             {
               "name": "frontmatter___description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

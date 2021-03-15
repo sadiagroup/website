@@ -33,7 +33,7 @@ export interface PortfolioQuery_mdx_frontmatter_banner {
 
 export interface PortfolioQuery_mdx_frontmatter {
   title: string;
-  date: any | null;
+  address: string | null;
   description: string | null;
   banner: PortfolioQuery_mdx_frontmatter_banner | null;
 }
