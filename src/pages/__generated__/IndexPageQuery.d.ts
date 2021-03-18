@@ -25,7 +25,7 @@ export interface IndexPageQuery_site_siteMetadata {
   title: string | null;
   description: string | null;
   capitalizeTitleOnHome: boolean | null;
-  titleImage: string | null;
+  titleImages: (string | null)[] | null;
   ogImage: string | null;
   twoColumnWall: boolean | null;
   introTag: string | null;

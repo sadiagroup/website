@@ -15471,7 +15471,7 @@
               "defaultValue": null
             },
             {
-              "name": "titleImage",
+              "name": "titleImages",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -16158,13 +16158,17 @@
               "deprecationReason": null
             },
             {
-              "name": "titleImage",
+              "name": "titleImages",
               "description": null,
               "args": [],
               "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                }
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -16780,7 +16784,7 @@
               "deprecationReason": null
             },
             {
-              "name": "siteMetadata___titleImage",
+              "name": "siteMetadata___titleImages",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

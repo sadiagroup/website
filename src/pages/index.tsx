@@ -3,6 +3,7 @@ import { graphql, PageProps } from 'gatsby'
 
 import { ArrowRight } from 'react-feather'
 import ScrollIntoView from 'react-scroll-into-view'
+import { Carousel } from 'react-responsive-carousel'
 
 import Layout from '../components/layout'
 import { Button } from '../components/ui'
@@ -108,7 +109,7 @@ const Wall = ({ data }) => {
               background: 'rgba(0,0,0,.75)',
             }}
           ></div>
-          <img src={data.titleImage} alt="" className="h-full w-auto max-w-none lg:h-auto lg:w-full" />
+          <SlideShow images={data.titleImages} />
         </div>
         <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
           {innerComponents}
@@ -123,6 +124,15 @@ const Wall = ({ data }) => {
     </div>
   )
 }
+
+const SlideShow = ({ images }) =>
+  <Carousel>
+    {images.map(image => (
+      <div>
+        <img src={image} className="h-full w-auto max-w-none lg:h-auto lg:w-full" />
+      </div>
+    ))}
+  </Carousel>
 
 const About = ({ data, title }) => {
   return (
@@ -163,7 +173,7 @@ export const query = graphql`
         title
         description
         capitalizeTitleOnHome
-        titleImage
+        titleImages
         ogImage
         twoColumnWall
         introTag

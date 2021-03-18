@@ -11,6 +11,7 @@ import Footer from './footer'
 import SEO, { SEOProps } from '../utils/seo'
 
 import '../style/index.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { ThemeQuery } from './__generated__/ThemeQuery'
 import CookieBox from './cookie'
 import store from '../utils/store'
