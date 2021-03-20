@@ -64,8 +64,8 @@ const siteMetadata = {
           url: "/products",
       },
       {
-          name: "CERTIFICATIONS",
-          url: "/certifications",
+          name: "COMPLIANCES",
+          url: "/compliances",
       },
       {
           name: "CLIENTS",
