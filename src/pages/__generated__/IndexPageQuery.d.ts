@@ -24,6 +24,7 @@ export interface IndexPageQuery_site_siteMetadata_social {
 export interface IndexPageQuery_site_siteMetadata {
   title: string | null;
   description: string | null;
+  factories: (string | null)[] | null;
   capitalizeTitleOnHome: boolean | null;
   titleImages: (string | null)[] | null;
   ogImage: string | null;
