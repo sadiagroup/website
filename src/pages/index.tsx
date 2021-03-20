@@ -80,18 +80,10 @@ const Wall = ({ data }) => {
       </div>
       <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">{data.introTag}</p>
       <p className="text-base lg:text-lg mt-4">
-        We are a 100% export-oriented group of companies focused on delivering best quality woven and shell fabric at
-        the best market price. We work hard to deliver products according to our client’s demands. Our products consist
-        of Pocketing, Lining, Inner Waist Band fabric as well as Shell Fabrics.
-        <div>
-          Our companies are:
+        {data.description}
           <ul className="ml-4 list-disc">
-            <li>Sadia Textile Mills Limited</li>
-            <li>Parisha Textile Mills Limited</li>
-            <li>Aqib Textile Mills Limited</li>
-            <li>Apan Textile Mills Limited</li>
+            {data.factories.map(fac => <li>{fac}</li>)}
           </ul>
-        </div>
       </p>
       <ScrollIntoView selector="#portfolio">
         <Button title="SEE OUR FACTORIES" type="button" iconRight={<ArrowRight />} />
@@ -172,6 +164,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        factories
         capitalizeTitleOnHome
         titleImages
         ogImage
