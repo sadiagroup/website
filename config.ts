@@ -56,7 +56,7 @@ const siteMetadata = {
       },
       {
           name: "OUR BUSINESSES",
-          url: "/businesses",
+          url: "#portfolio",
       },
       {
           name: "OUR PRODUCTS",
@@ -65,14 +65,6 @@ const siteMetadata = {
       {
           name: "COMPLIANCES",
           url: "/compliances",
-      },
-      {
-          name: "CLIENTS",
-          url: "/clients",
-      },
-      {
-          name: "SUSTAINABILITY",
-          url: "/sustainability",
       },
   ],
   footerLinks: [
