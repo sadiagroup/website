@@ -56,7 +56,7 @@ const siteMetadata = {
       },
       {
           name: "OUR BUSINESSES",
-          url: "#portfolio",
+          url: "/portfolio",
       },
       {
           name: "OUR PRODUCTS",
