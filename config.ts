@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: `Sadia Textile Mills Ltd.`,
+  title: `Sadia Group of Industries`,
   siteUrl: `https://www.sadiatextile.com`,
   capitalizeTitleOnHome: false,
   logo: `/images/logo.png`,
@@ -30,11 +30,11 @@ const siteMetadata = {
     'Apan Textile Mills Limited',
   ],
   about:`
-      Sadia Textile Mills Ltd. is one of the leading manufacturers & exporters of fabrics in Bangladesh. We are interested to provide the best quality of fabrics with affordable price to our buyers, including international buying houses, buyer offices, liaison offices, garments, and related companies.
+      Sadia Group of Industries is one of the leading manufacturers & exporters of fabrics in Bangladesh. We are interested to provide the best quality of fabrics with affordable price to our buyers, including international buying houses, buyer offices, liaison offices, garments, and related companies.
 
-      We started our journey in 2010 and have grown steadily ever since. Sadia Textile Mills Ltd. now offers the complete range of trim fabrics. We have always produced and supplied the highest international standards in quality of fabrics. As regards to environmental, health & safety management, we provide customers AZO, APEO, Formaldehyde, pH & others hazardous chemical free fabrics in local and international markets.
+      We started our journey in 2010 and have grown steadily ever since. Sadia Group of Industries now offers the complete range of trim fabrics. We have always produced and supplied the highest international standards in quality of fabrics. As regards to environmental, health & safety management, we provide customers AZO, APEO, Formaldehyde, pH & others hazardous chemical free fabrics in local and international markets.
 
-      Sadia Textile Mills Ltd. is committed to face the global challenge and to that end in view BMRE is almost a continual phenomenon. As per the requirements and constraints of H&M, we regularly execute speed orders and super-speed orders gracefully. We keep a stock of 25 lac yards of different types of gray fabric and 3 lac yards of dying-processed fabric for these quick-delivery purpose.
+      Sadia Group of Industries is committed to face the global challenge and to that end in view BMRE is almost a continual phenomenon. As per the requirements and constraints of H&M, we regularly execute speed orders and super-speed orders gracefully. We keep a stock of 25 lac yards of different types of gray fabric and 3 lac yards of dying-processed fabric for these quick-delivery purpose.
 
       We are looking forward to hearing your favorable response. In the meantime, if you need any more information, please feel free contact with us.
     `,
