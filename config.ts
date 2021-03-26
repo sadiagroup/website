@@ -2,8 +2,8 @@ const siteMetadata = {
   title: `Sadia Group of Industries`,
   siteUrl: `https://www.sadiatextile.com`,
   capitalizeTitleOnHome: false,
-  logo: `/images/logo.png`,
-  icon: `/images/logo.png`,
+  logo: `/images/logos/sadia.png`,
+  icon: `/images/logos/sadia.png`,
   titleImages: [
     '/images/slides/DSC_0033-min.JPG',
     '/images/slides/DSC_0107-min.JPG',
