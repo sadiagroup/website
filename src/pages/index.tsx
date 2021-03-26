@@ -103,7 +103,7 @@ const Wall = ({ data }) => {
   if (twoColumnWall) {
     return (
       <div className="wall h-screen flex relative justify-center items-center overflow-hidden" ref={wall}>
-        <div className="flex-1 lg:block absolute lg:relative w-full h-full top-0 left-0">
+        <div className="flex-1 lg:block absolute lg:relative w-8/12 h-8/12 top-0 left-0">
           <div
             className="absolute left-0 top-0 w-full h-full lg:hidden"
             style={{
