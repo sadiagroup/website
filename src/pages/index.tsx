@@ -4,6 +4,7 @@ import { graphql, PageProps } from 'gatsby'
 import { ArrowRight } from 'react-feather'
 import ScrollIntoView from 'react-scroll-into-view'
 import { Carousel } from 'react-responsive-carousel'
+import TextLoop from 'react-text-loop'
 
 import Layout from '../components/layout'
 import { Button } from '../components/ui'
@@ -81,9 +82,17 @@ const Wall = ({ data }) => {
       <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">{data.introTag}</p>
       <p className="text-base lg:text-lg mt-4">
         {data.description}
-          <ul className="ml-4 list-disc">
-            {data.factories.map(fac => <li>{fac}</li>)}
-          </ul>
+          <TextLoop>
+            {data.factories.map(fac =>
+              <div className="flex items-center">
+                <img className="w-20 h-20 rounded-full mr-4" src={fac.logo} alt="i" />
+                <div className="text-md">
+                  <p className="text-black leading-none">{fac.name}</p>
+                  <p className="text-grey-dark">{fac.address}</p>
+                </div>
+              </div>
+            )}
+          </TextLoop>
       </p>
       <ScrollIntoView selector="#portfolio">
         <Button title="SEE OUR FACTORIES" type="button" iconRight={<ArrowRight />} />
@@ -164,7 +173,11 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        factories
+        factories {
+          name
+          address
+          logo
+        }
         capitalizeTitleOnHome
         titleImages
         ogImage

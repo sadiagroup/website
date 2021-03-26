@@ -24,10 +24,26 @@ const siteMetadata = {
   introTag: `100% Export oriented fabric manufacturer & exporter`,
   description: `We are a 100% export-oriented group of companies focused on delivering best quality woven and shell fabric at the best market price. We work hard to deliver products according to our client’s demands. Our products consist of Pocketing, Lining, Inner Waist Band fabric as well as Shell Fabrics. Our companies are:`,
   factories: [
-    'Sadia Textile Mills Limited',
-    'Parisha Textile Mills Limited',
-    'Aqib Textile Mills Limited',
-    'Apan Textile Mills Limited',
+    {
+      name: 'Sadia Textile Mills Limited',
+      address: 'Kadimdhalla, Baniara, Mirzapur, Tangail',
+      logo: '/images/logos/sadia.png',
+    },
+    {
+      name: 'Parisha Textile Mills Limited',
+      address: 'Kadimdhalla, Baniara, Mirzapur, Tangail',
+      logo: '/images/logos/parisha.png',
+    },
+    {
+      name: 'Aqib Textile Mills Limited',
+      address: 'Beron, Ashulia, Dhaka',
+      logo: '/images/logos/aqib.png',
+    },
+    {
+      name: 'Apan Textile Mills Limited',
+      address: 'Chitrashail, Ashulia, Dhaka',
+      logo: '/images/logos/apan.png',
+    }
   ],
   about:`
       Sadia Group of Industries is one of the leading manufacturers & exporters of fabrics in Bangladesh. We are interested to provide the best quality of fabrics with affordable price to our buyers, including international buying houses, buyer offices, liaison offices, garments, and related companies.

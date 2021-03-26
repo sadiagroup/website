@@ -7,6 +7,12 @@
 // GraphQL query operation: IndexPageQuery
 // ====================================================
 
+export interface IndexPageQuery_site_siteMetadata_factories {
+  name: string | null;
+  address: string | null;
+  logo: string | null;
+}
+
 export interface IndexPageQuery_site_siteMetadata_contact {
   api_url: string | null;
   description: string | null;
@@ -24,7 +30,7 @@ export interface IndexPageQuery_site_siteMetadata_social {
 export interface IndexPageQuery_site_siteMetadata {
   title: string | null;
   description: string | null;
-  factories: (string | null)[] | null;
+  factories: (IndexPageQuery_site_siteMetadata_factories | null)[] | null;
   capitalizeTitleOnHome: boolean | null;
   titleImages: (string | null)[] | null;
   ogImage: string | null;
