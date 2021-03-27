@@ -22,7 +22,7 @@ const siteMetadata = {
   twoColumnWall: true,
   cookiePolicy: true,
   introTag: `100% Export oriented fabric manufacturer & exporter`,
-  description: `We are a 100% export-oriented group of companies focused on delivering best quality woven and shell fabric at the best market price. We work hard to deliver products according to our client’s demands. Our products consist of Pocketing, Lining, Inner Waist Band fabric as well as Shell Fabrics. Our companies are:`,
+  description: `We are a 100% export oriented group of companies focused on delivering best quality woven fabric at the best market price. We work hard to deliver products according to our client's demands. We started our journey in 2001 and have grown steadily ever since. Sadia group now offers a wide range of non-denim woven fabrics. Our companies are:`,
   factories: [
     {
       name: 'Sadia Textile Mills Limited',
