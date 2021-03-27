@@ -82,17 +82,19 @@ const Wall = ({ data }) => {
       <p className="text-lg lg:text-xl text-color-2 pt-4 lg:pt-0">{data.introTag}</p>
       <p className="text-base lg:text-lg mt-4">
         {data.description}
-          <TextLoop>
-            {data.factories.map(fac =>
-              <div className="flex items-center">
-                <img className="w-20 h-20 rounded-full mr-4" src={fac.logo} alt="i" />
-                <div className="text-md">
-                  <p className="text-black leading-none">{fac.name}</p>
-                  <p className="text-grey-dark">{fac.address}</p>
+          <div>
+            <TextLoop>
+              {data.factories.map(fac =>
+                <div className="flex items-center">
+                  <img className="w-20 h-20 rounded-full mr-4" src={fac.logo} alt="i" />
+                  <div className="text-md">
+                    <p className="text-black leading-none">{fac.name}</p>
+                    <p className="text-grey-dark">{fac.address}</p>
+                  </div>
                 </div>
-              </div>
-            )}
-          </TextLoop>
+              )}
+            </TextLoop>
+          </div>
       </p>
       <ScrollIntoView selector="#portfolio">
         <Button title="SEE OUR FACTORIES" type="button" iconRight={<ArrowRight />} />
