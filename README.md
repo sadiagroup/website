@@ -16,6 +16,10 @@ If something is not working properly, restart the development server. If the pro
 
 If these steps do not solve the problem, please open an issue on GitHub, stating your problem clearly.
 
+## Acknowledgement
+
+This website is built on top of the Gatsby.js starter template, [`akzhy/gatsby-starter-elemental`](https://github.com/akzhy/gatsby-starter-elemental).
+
 ## Contributing
 
 Any kind of contributions are welcome. Bump the version and create a PR.
