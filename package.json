@@ -1,8 +1,10 @@
 {
-  "name": "gatsby-starter-elemental",
+  "name": "@sadiagroup/website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "2.1.2",
+  "description": "The Official Website of Sadia Group of Industries",
+  "version": "1.0.0",
+  "author": "Ahad Chowdhury <ahad@sadiatextile.com> (https://www.sadiatextile.com)",
+  "homepage": "https://github.com/sadiagroup/website#readme",
   "license": "AGPL-3.0-only",
   "scripts": {
     "build": "gatsby build",
@@ -61,9 +63,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/sadiagroup/website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "email": "ahad@sadiatextile.com",
+    "url": "https://github.com/sadiagroup/website/issues"
   }
 }
