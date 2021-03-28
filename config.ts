@@ -161,29 +161,6 @@ const beforeContactFormSubmit = data => {
   }
 }
 
-const contactFormSubmit = async (api, data) => {
-  let res: any = await fetch(api, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-      },
-  })
-
-  res = await res.json()
-
-  if (res.success) {
-      return {
-          result: true,
-      }
-  }
-  return {
-      result: false,
-      ...res,
-  }
-}
-
 const defaults = {
   disqus: null,
   twoColumnWall: true,
@@ -199,4 +176,4 @@ Object.keys(defaults).forEach(item => {
   }
 })
 
-export { siteMetadata, beforeContactFormSubmit, contactFormSubmit }
+export { siteMetadata, beforeContactFormSubmit }

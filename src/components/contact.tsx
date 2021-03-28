@@ -1,9 +1,10 @@
 import React, { useState } from "react"
 import { Send, Mail, Phone, MapPin, Loader } from "react-feather"
+import axios from "axios"
 
 import { TextInput, Button } from "./ui"
 
-import { beforeContactFormSubmit, contactFormSubmit } from "../../config"
+import { beforeContactFormSubmit } from "../../config"
 
 import SocialLinks from "../utils/sociallinks"
 import { ContactQuery_site_siteMetadata_contact } from "../pages/__generated__/ContactQuery"
@@ -33,33 +34,25 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
                 if (validate.result) {
                     setFeedback({});
-                    contactFormSubmit(api, validate.data).then(res => {
-                        if (res.result) {
-                            setFeedback({
-                                4: {
-                                    type: "success",
-                                    message:
-                                        "Your message has been sent.",
-                                },
-                            })
-                        } else {
-                            setFeedback({
-                                4: {
-                                    message:
-                                        "There was an error sending the message. Please try again.",
-                                },
-                            })
-                        }
-                        setTransactionState(false);
-                    }).catch(err => {
+                    axios.post(api, validate.data, { headers: { "content-type": "application/json" } })
+                      .then(res => {
                         setFeedback({
-                            4: {
-                                message:
-                                    "There was an error sending the message. Please try again.",
-                            },
-                        })
-                        setTransactionState(false);
-                    })
+                          4: {
+                            type: "success",
+                            message: "Your message has been sent.",
+                          }
+                        });
+                        console.log(res);
+                      })
+                      .catch(err => {
+                        setFeedback({
+                          4: {
+                            message: 'There was an error sending the message. Please try again.',
+                          }
+                        });
+                        console.error(err);
+                      })
+                      .then(() => setTransactionState(false));
                 } else {
                     const errs = {}
 
