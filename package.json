@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "2.1.2",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
