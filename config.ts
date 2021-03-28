@@ -110,7 +110,7 @@ const siteMetadata = {
       api_url: "https://getform.io/f/65608587-3d12-4d4c-9273-d27a8f5720f9",
       description: `If you have a question or comment, feel free to leave here!`,
       mail: "info@sadiatextile.com",
-      phone: "+8801714100878",
+      phone: "+8801711856850, +8801714100878",
       address: "House 6, Road 13, Sector 7, Uttara, Dhaka 1230, Bangladesh",
   },
   disqus: "elemental-netlify-com",
