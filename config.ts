@@ -18,7 +18,7 @@ const siteMetadata = {
     '/images/slides/IMG20210224170745-min.jpg',
     '/images/slides/IMG20210224171108-min.jpg',
   ],
-  ogImage: `/images/wall.png`,
+  ogImage: `/images/slides/IMG20210224170745-min.jpg`,
   twoColumnWall: true,
   cookiePolicy: true,
   introTag: `100% Export oriented fabric manufacturer & exporter`,
