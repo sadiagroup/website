@@ -1,6 +1,6 @@
 # The Official Website of Sadia Group of Industries
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d69d3e64-54ba-49d2-8b8a-10054b7b3c4a/deploy-status)](https://app.netlify.com/sites/sadiagroup/deploys)
+![Status of Staging on Netlify](https://img.shields.io/netlify/d69d3e64-54ba-49d2-8b8a-10054b7b3c4a?label=staging&logo=netlify&style=flat-square)
 
 ## Getting Started.
 
