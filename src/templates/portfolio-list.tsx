@@ -35,12 +35,7 @@ export default function portfolioList({
 
 export const query = graphql`
 	query PortfolioListQuery($skip: Int!, $limit: Int!) {
-		allMdx(
-			filter: { fields: { sourceName: { eq: "portfolio" } } }
-			sort: { fields: [frontmatter___date], order: DESC }
-			limit: $limit
-			skip: $skip
-		) {
+		allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }, limit: $limit, skip: $skip) {
 			edges {
 				node {
 					id
