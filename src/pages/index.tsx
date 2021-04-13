@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React, { useEffect, useRef, useState } from 'react'
 import { graphql, PageProps } from 'gatsby'
 
@@ -85,7 +86,7 @@ const Wall = ({ data }) => {
 				<div>
 					<TextLoop>
 						{data.factories.map(fac => (
-							<div className="flex items-center">
+							<div className="flex items-center" key={fac.name}>
 								<img className="w-20 h-20 rounded-full mr-4" src={fac.logo} alt="i" />
 								<div className="text-md">
 									<p className="text-black leading-none">{fac.name}</p>
@@ -130,8 +131,8 @@ const Wall = ({ data }) => {
 
 const SlideShow = ({ images }) => (
 	<Carousel autoPlay={true} infiniteLoop={true} interval={2500}>
-		{images.map(image => (
-			<div>
+		{images.map((image, idx) => (
+			<div key={idx}>
 				<img src={image} className="h-full w-auto max-w-none lg:h-auto lg:w-full" />
 			</div>
 		))}
@@ -171,80 +172,80 @@ const Contact = ({ data }) => {
 }
 
 export const query = graphql`
-  query IndexPageQuery {
-    site: site {
-      siteMetadata {
-        title
-        description
-        factories {
-          name
-          address
-          logo
-        }
-        capitalizeTitleOnHome
-        titleImages
-        ogImage
-        twoColumnWall
-        introTag
-        description
-        mission
-        vision
-        contact {
-          api_url
-          description
-          mail
-          phone
-          address
-        }
-        social {
-          name
-          url
-          icon
-        }
-      }
-    }
-    portfolio: allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }, limit: 6) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            description
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-    blog: allMdx(filter: { fields: { sourceName: { eq: "blog" } } }, limit: 6) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            description
-            date(formatString: "DD MMMM YYYY")
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
+	query IndexPageQuery {
+		site: site {
+			siteMetadata {
+				title
+				description
+				factories {
+					name
+					address
+					logo
+				}
+				capitalizeTitleOnHome
+				titleImages
+				ogImage
+				twoColumnWall
+				introTag
+				description
+				mission
+				vision
+				contact {
+					api_url
+					description
+					mail
+					phone
+					address
+				}
+				social {
+					name
+					url
+					icon
+				}
+			}
+		}
+		portfolio: allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }, limit: 6) {
+			edges {
+				node {
+					id
+					frontmatter {
+						title
+						description
+						image {
+							childImageSharp {
+								fluid(maxWidth: 1000) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+					}
+					fields {
+						slug
+					}
+				}
+			}
+		}
+		blog: allMdx(filter: { fields: { sourceName: { eq: "blog" } } }, limit: 6) {
+			edges {
+				node {
+					id
+					frontmatter {
+						title
+						description
+						date(formatString: "DD MMMM YYYY")
+						image {
+							childImageSharp {
+								fluid(maxWidth: 1000) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+					}
+					fields {
+						slug
+					}
+				}
+			}
+		}
+	}
 `

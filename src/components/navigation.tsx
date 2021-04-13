@@ -9,19 +9,35 @@ import SideBar from './sidebar'
 import { NavigationQuery } from './__generated__/NavigationQuery'
 import { Theme } from './layout'
 
-type NavbarProps = { navPlaceholder: boolean, location: WindowLocation, currentTheme: number, switchTheme: () => void, themes: Theme[], allowThemeSwitch: boolean, front: boolean };
-const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme, switchTheme, themes, allowThemeSwitch=true, front }) => {
+type NavbarProps = {
+	navPlaceholder: boolean
+	location: WindowLocation
+	currentTheme: number
+	switchTheme: () => void
+	themes: Theme[]
+	allowThemeSwitch: boolean
+	front: boolean
+}
+const Navbar: React.FC<NavbarProps> = ({
+	navPlaceholder,
+	location,
+	currentTheme,
+	switchTheme,
+	themes,
+	allowThemeSwitch = true,
+	front,
+}) => {
 	const currentLocation = location.pathname.split('/')[1]
 
 	const data = useStaticQuery<NavigationQuery>(graphql`
-        query NavigationQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
+		query NavigationQuery {
+			site {
+				siteMetadata {
+					title
+				}
+			}
+		}
+	`)
 
 	const navbar = useRef(null)
 
@@ -29,13 +45,11 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
 	const [navbarHeight, setNavbarHeight] = useState(0)
 	const [sidebarOpen, setSidebarOpen] = useState(false)
 
-
 	useEffect(() => {
 		const onScroll = () => {
 			if (document.documentElement.scrollTop > 50 && !scrolled) {
 				changeState(true)
-			} else if (document.documentElement.scrollTop <= 50 && scrolled)
-				changeState(false)
+			} else if (document.documentElement.scrollTop <= 50 && scrolled) changeState(false)
 		}
 
 		window.addEventListener('scroll', onScroll)
@@ -72,33 +86,39 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
 					<div className="bg-bg h-full flex flex-col justify-center relative">
 						<div className="absolute top-0 my-4 text-center w-full">
 							<Link to="/" title={data.site.siteMetadata.title} className="inline-block">
-								<Logo
-									className={`duration-300 transition-all ${
-										scrolled ? 'w-6' : 'w-8'
-									}`}
-								/>
+								<Logo className={`duration-300 transition-all ${scrolled ? 'w-6' : 'w-8'}`} />
 							</Link>
 						</div>
 						<div className="text-center">
-							<List name="sidebar-nav" current={currentLocation}  currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch} liClassName="block my-2"/>
+							<List
+								name="sidebar-nav"
+								current={currentLocation}
+								currentTheme={currentTheme}
+								switchTheme={switchTheme}
+								themes={themes}
+								withThemeSwitch={allowThemeSwitch}
+								liClassName="block my-2"
+							/>
 						</div>
 					</div>
 				</SideBar>
 				<Link to="/" title={data.site.siteMetadata.title}>
-					<Logo
-						className={`duration-300 transition-all ${
-							scrolled ? 'w-12' : 'w-16'
-						}`}
-					/>
+					<Logo className={`duration-300 transition-all ${scrolled ? 'w-12' : 'w-16'}`} />
 				</Link>
 				<div className="hidden lg:block">
-					<List name="navbar" className="nav-links flex" current={currentLocation} currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch}/>
+					<List
+						name="navbar"
+						className="nav-links flex"
+						current={currentLocation}
+						currentTheme={currentTheme}
+						switchTheme={switchTheme}
+						themes={themes}
+						withThemeSwitch={allowThemeSwitch}
+					/>
 				</div>
 				<div className="absolute line h-px left-0 bottom-0 bg-gradient-primary"></div>
 			</div>
-			{navPlaceholder && (
-				<div style={{ height: `${navbarHeight}px` }}></div>
-			)}
+			{navPlaceholder && <div style={{ height: `${navbarHeight}px` }}></div>}
 		</React.Fragment>
 	)
 }

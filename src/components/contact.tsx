@@ -9,7 +9,7 @@ import { beforeContactFormSubmit } from '../../config'
 import SocialLinks from '../utils/sociallinks'
 import { ContactQuery_site_siteMetadata_contact } from '../pages/__generated__/ContactQuery'
 
-type FeedbackState = { [id: number]: { message?: string, type?: string }}
+type FeedbackState = { [id: number]: { message?: string; type?: string } }
 
 const Form: React.FC<{ api: string }> = ({ api }) => {
 	const [data, changeData] = useState({
@@ -20,7 +20,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
 	const [feedback, setFeedback] = useState<FeedbackState>({})
 
-	const [ transactionState, setTransactionState] = useState(false)
+	const [transactionState, setTransactionState] = useState(false)
 
 	const updateData = v => changeData({ ...data, ...v })
 
@@ -34,13 +34,14 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 
 				if (validate.result) {
 					setFeedback({})
-					axios.post(api, validate.data, { headers: { 'content-type': 'application/json' } })
+					axios
+						.post(api, validate.data, { headers: { 'content-type': 'application/json' } })
 						.then(res => {
 							setFeedback({
 								4: {
 									type: 'success',
 									message: 'Your message has been sent.',
-								}
+								},
 							})
 							console.log(res)
 						})
@@ -48,7 +49,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 							setFeedback({
 								4: {
 									message: 'There was an error sending the message. Please try again.',
-								}
+								},
 							})
 							console.error(err)
 						})
@@ -73,13 +74,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 						name: e.target.value,
 					})
 				}
-				footer={
-					<FormMessage
-						show={feedback[1] !== undefined}
-						type="error"
-						message={feedback[1]?.message}
-					/>
-				}
+				footer={<FormMessage show={feedback[1] !== undefined} type="error" message={feedback[1]?.message} />}
 			/>
 			<TextInput
 				label="Email"
@@ -90,13 +85,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 						email: e.target.value,
 					})
 				}
-				footer={
-					<FormMessage
-						show={feedback[2] !== undefined}
-						type="error"
-						message={feedback[2]?.message}
-					/>
-				}
+				footer={<FormMessage show={feedback[2] !== undefined} type="error" message={feedback[2]?.message} />}
 			/>
 			<TextInput
 				label="Message"
@@ -107,13 +96,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 						message: e.target.value,
 					})
 				}
-				footer={
-					<FormMessage
-						show={feedback[3] !== undefined}
-						type="error"
-						message={feedback[3]?.message}
-					/>
-				}
+				footer={<FormMessage show={feedback[3] !== undefined} type="error" message={feedback[3]?.message} />}
 			/>
 			<div className="py-3 lg:p-4">
 				<FormMessage
@@ -126,7 +109,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 					type="button,submit"
 					title="Send"
 					disabled={transactionState}
-					iconRight={<IconRight spin={transactionState}/>}
+					iconRight={<IconRight spin={transactionState} />}
 				/>
 			</div>
 		</form>
@@ -136,9 +119,7 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = ({ data }) => {
 	return (
 		<div>
-			{data.description && (
-				<p className="text-color-default">{data.description}</p>
-			)}
+			{data.description && <p className="text-color-default">{data.description}</p>}
 			<ul className="my-4">
 				{data.mail && (
 					<li className="flex items-center">
@@ -177,13 +158,16 @@ const Description: React.FC<{ data: ContactQuery_site_siteMetadata_contact }> = 
 }
 
 const IconRight = ({ spin = false }) => {
-	if(spin) {
+	if (spin) {
 		return (
-			<span className="spin" style={{
-				display: 'inline-block',
-				verticalAlign: 'middle',
-				animationDuration: '5s'
-			}}>
+			<span
+				className="spin"
+				style={{
+					display: 'inline-block',
+					verticalAlign: 'middle',
+					animationDuration: '5s',
+				}}
+			>
 				<Loader />
 			</span>
 		)
@@ -191,7 +175,7 @@ const IconRight = ({ spin = false }) => {
 	return <Send />
 }
 
-type FormMessageProps = { show: boolean, type: string, message: string }
+type FormMessageProps = { show: boolean; type: string; message: string }
 const FormMessage: React.FC<FormMessageProps> = ({ show, type, message }) => {
 	if (!show) return null
 	return <p className={`text-${type} my-2`}>{message}</p>

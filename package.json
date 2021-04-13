@@ -10,7 +10,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "lint": "eslint src/**/*.tsx --fix",
+    "lint": "eslint \"**/*.{ts,tsx}\" --fix --quiet",
     "resize-images": "ts-node scripts/resize-images.ts",
     "start": "gatsby develop",
     "serve": "gatsby serve",

@@ -25,27 +25,26 @@ const dirName = d.toString()
 readdirSync(dirName)
 	.filter(async file => (await fromFile(`${dirName}/${file}`)).mime?.toLowerCase().includes('image') ?? false)
 	.forEach(async file => {
-    const image = sharp(`${dirName}/${file}`)
-    let height, width
+		const image = sharp(`${dirName}/${file}`)
+		let height, width
 
-    if (p) {
-      const percentage = parseNumber(p, DEFAULT_PERCENTAGE)
-      const info = await image.metadata()
-      height = Math.round(info.height * percentage / 100)
-      width = Math.round(info.width * percentage / 100)
-    } else {
-      height = parseNumber(h, DEFAULT_DIMENSIONS)
-      width = parseNumber(w, DEFAULT_DIMENSIONS)
-    }
+		if (p) {
+			const percentage = parseNumber(p, DEFAULT_PERCENTAGE)
+			const info = await image.metadata()
+			height = Math.round((info.height * percentage) / 100)
+			width = Math.round((info.width * percentage) / 100)
+		} else {
+			height = parseNumber(h, DEFAULT_DIMENSIONS)
+			width = parseNumber(w, DEFAULT_DIMENSIONS)
+		}
 
-		let newDir = join(dirName, p ? 'resized' : `resized-${width}-${height}`)
+		const newDir = join(dirName, p ? 'resized' : `resized-${width}-${height}`)
 		try {
-			if (!existsSync(newDir))
-        mkdirSync(newDir)
+			if (!existsSync(newDir)) mkdirSync(newDir)
 		} catch (err) {
 			console.error(`Could not make new directory ${newDir}.`)
 			process.exit(1)
 		}
 
-    image.resize(width, height).toFile(`${newDir}/${file}`)
+		image.resize(width, height).toFile(`${newDir}/${file}`)
 	})

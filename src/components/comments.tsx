@@ -7,27 +7,26 @@ import { CommentsQuery } from './__generated__/CommentsQuery'
 import { WindowLocation } from '@reach/router'
 import store from '../utils/store'
 
-type CommentsProps = { title: string; location: WindowLocation<{}> }
+type CommentsProps = { title: string; location: WindowLocation<Record<string, unknown>> }
 const Comments: React.FC<CommentsProps> = ({ title, location }) => {
-
 	// State used to reload disqus on theme change
 
 	const [counter, setCounter] = useState(0)
 
 	const data = useStaticQuery<CommentsQuery>(graphql`
-        query CommentsQuery {
-            site {
-                siteMetadata {
-                    siteUrl
-                    disqus
-                }
-            }
-        }
-    `)
+		query CommentsQuery {
+			site {
+				siteMetadata {
+					siteUrl
+					disqus
+				}
+			}
+		}
+	`)
 
 	useEffect(() => {
 		store.listen('theme:change', _ => {
-			setCounter(p => p+1)
+			setCounter(p => p + 1)
 		})
 	}, [])
 

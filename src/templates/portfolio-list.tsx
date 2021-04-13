@@ -5,7 +5,11 @@ import PortfolioItem from '../components/item-portfolio'
 import Pagination from '../components/pagination'
 import { PortfolioListQuery } from './__generated__/PortfolioListQuery'
 
-export default function portfolioList({ data, pageContext, location }: PageProps<PortfolioListQuery, {}>) {
+export default function portfolioList({
+	data,
+	pageContext,
+	location,
+}: PageProps<PortfolioListQuery, Record<string, unknown>>) {
 	useEffect(() => {
 		window.dispatchEvent(new CustomEvent('scroll'))
 	}, [])
@@ -30,35 +34,35 @@ export default function portfolioList({ data, pageContext, location }: PageProps
 }
 
 export const query = graphql`
-  query PortfolioListQuery($skip: Int!, $limit: Int!) {
-    allMdx(
-      filter: { fields: { sourceName: { eq: "portfolio" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            description
-            image {
-              publicURL
-              childImageSharp {
-                fluid(maxWidth: 1920) {
-                  srcSet
-                  ...GatsbyImageSharpFluid
-                }
-                id
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
+	query PortfolioListQuery($skip: Int!, $limit: Int!) {
+		allMdx(
+			filter: { fields: { sourceName: { eq: "portfolio" } } }
+			sort: { fields: [frontmatter___date], order: DESC }
+			limit: $limit
+			skip: $skip
+		) {
+			edges {
+				node {
+					id
+					frontmatter {
+						title
+						description
+						image {
+							publicURL
+							childImageSharp {
+								fluid(maxWidth: 1920) {
+									srcSet
+									...GatsbyImageSharpFluid
+								}
+								id
+							}
+						}
+					}
+					fields {
+						slug
+					}
+				}
+			}
+		}
+	}
 `

@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { BasePagesQuery } from './__generated__/BasePagesQuery'
 import { Row, Col } from '../components/shortcodes'
 
-export default function basePages({ data, location }: PageProps<BasePagesQuery, {}>) {
+export default function basePages({ data, location }: PageProps<BasePagesQuery, Record<string, unknown>>) {
 	return (
 		<Layout
 			seo={{
@@ -31,16 +31,16 @@ export default function basePages({ data, location }: PageProps<BasePagesQuery, 
 }
 
 export const query = graphql`
-  query BasePagesQuery($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
-      body
-      frontmatter {
-        title
-        image {
-          publicURL
-        }
-        description
-      }
-    }
-  }
+	query BasePagesQuery($slug: String!) {
+		mdx(fields: { slug: { eq: $slug } }) {
+			body
+			frontmatter {
+				title
+				image {
+					publicURL
+				}
+				description
+			}
+		}
+	}
 `

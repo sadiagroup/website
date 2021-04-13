@@ -7,8 +7,8 @@ import Parallax from '../utils/parallax'
 import { IndexPageQuery_portfolio_edges_node } from '../pages/__generated__/IndexPageQuery'
 
 type ItemPortfolioProps = {
-  data: IndexPageQuery_portfolio_edges_node
-  even: boolean
+	data: IndexPageQuery_portfolio_edges_node
+	even: boolean
 }
 
 export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
@@ -41,13 +41,11 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 	useEffect(() => {
 		transform.current = Math.min(getWindowHeight() / 2, 300) * Math.max(0, state.percentage - percentageThreshold)
 
-		if (getWindowWidth() < 1024)
-			updateState({ animated: true })
+		if (getWindowWidth() < 1024) updateState({ animated: true })
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [state.percentage])
 
-	if (state.percentage > percentageThreshold && !state.animated)
-		updateState({ animated: true })
+	if (state.percentage > percentageThreshold && !state.animated) updateState({ animated: true })
 
 	return (
 		<Parallax changePercentage={updateState}>
@@ -58,10 +56,7 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 					}`}
 				>
 					<div className="relative flex-1">
-						<div
-							className="image relative z-10"
-							style={{ transform: `translate(0px,${transform.current}px)` }}
-						>
+						<div className="image relative z-10" style={{ transform: `translate(0px,${transform.current}px)` }}>
 							<Img fluid={data.frontmatter.image.childImageSharp.fluid} alt={data.frontmatter.title} />
 						</div>
 					</div>

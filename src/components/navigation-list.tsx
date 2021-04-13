@@ -3,7 +3,16 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { NavigationListQuery } from './__generated__/NavigationListQuery'
 import { Theme } from './layout'
 
-type NavigationListProps = { name?: string, className?: string, liClassName?: string, current?: string, withThemeSwitch?: boolean, currentTheme?: number, switchTheme?: () => void, themes?: Theme[] }
+type NavigationListProps = {
+	name?: string
+	className?: string
+	liClassName?: string
+	current?: string
+	withThemeSwitch?: boolean
+	currentTheme?: number
+	switchTheme?: () => void
+	themes?: Theme[]
+}
 const List: React.FC<NavigationListProps> = ({
 	name,
 	className = '',
@@ -15,27 +24,22 @@ const List: React.FC<NavigationListProps> = ({
 	themes,
 }) => {
 	const data = useStaticQuery<NavigationListQuery>(graphql`
-        query NavigationListQuery {
-            site {
-                siteMetadata {
-                    navLinks {
-                        name
-                        url
-                    }
-                    darkmode
-                    switchTheme
-                }
-            }
-        }
-    `)
+		query NavigationListQuery {
+			site {
+				siteMetadata {
+					navLinks {
+						name
+						url
+					}
+					darkmode
+					switchTheme
+				}
+			}
+		}
+	`)
 	const items = data.site.siteMetadata.navLinks
 	const list = items.map((e, i) => (
-		<ListItem
-			key={`navigation-${name}-${i}`}
-			data={e}
-			active={`/${current}` === e.url}
-			liClassName={liClassName}
-		/>
+		<ListItem key={`navigation-${name}-${i}`} data={e} active={`/${current}` === e.url} liClassName={liClassName} />
 	))
 
 	if (withThemeSwitch) {
@@ -55,10 +59,7 @@ const List: React.FC<NavigationListProps> = ({
 			)
 		})
 		list.push(
-			<li
-				className="theme-switcher"
-				key={`${name}-theme-switcher relative`}
-			>
+			<li className="theme-switcher" key={`${name}-theme-switcher relative`}>
 				{themeButtons}
 			</li>
 		)

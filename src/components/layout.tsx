@@ -18,26 +18,26 @@ import store from '../utils/store'
 
 export type Theme = { name: string; label: string; icon: JSX.Element }
 type LayoutProps = {
-  children: any
-  front?: boolean
-  seo: Partial<SEOProps>
-  navPlaceholder?: boolean
-  location: WindowLocation
+	children: any
+	front?: boolean
+	seo: Partial<SEOProps>
+	navPlaceholder?: boolean
+	location: WindowLocation
 }
 
-export default ({ children, front, seo, navPlaceholder = true, location }: LayoutProps) => {
+export default ({ children, front, seo, navPlaceholder = true, location }: LayoutProps): React.ReactElement => {
 	const query = useStaticQuery<ThemeQuery>(graphql`
-    query ThemeQuery {
-      site {
-        siteMetadata {
-          icon
-          switchTheme
-          darkmode
-          cookiePolicy
-        }
-      }
-    }
-  `)
+		query ThemeQuery {
+			site {
+				siteMetadata {
+					icon
+					switchTheme
+					darkmode
+					cookiePolicy
+				}
+			}
+		}
+	`)
 
 	const themes: Theme[] = [
 		{
@@ -53,7 +53,6 @@ export default ({ children, front, seo, navPlaceholder = true, location }: Layou
 	]
 
 	const isDarkTheme = query.site.siteMetadata.darkmode
-	const cookiePolicyEnabled = query.site.siteMetadata.cookiePolicy
 
 	const [theme, changeTheme] = useState(isDarkTheme ? 1 : 0)
 	const [cookieShown, setCookieShown] = useState(false)
