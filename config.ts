@@ -60,7 +60,6 @@ const siteMetadata = {
 	vision:
 		'Our vision is to provide a holistic support to our clients’ needs while maintaining environment friendly business at all times. ',
 	author: '@maacpiash',
-	blogItemsPerPage: 10,
 	portfolioItemsPerPage: 10,
 	darkmode: false,
 	switchTheme: true,

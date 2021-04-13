@@ -3762,11 +3762,21 @@
               "defaultValue": null
             },
             {
-              "name": "date",
+              "name": "description",
               "description": "",
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "DateQueryOperatorInput",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "address",
+              "description": "",
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -3787,26 +3797,6 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "FileFilterInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "description",
-              "description": "",
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "StringQueryOperatorInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "address",
-              "description": "",
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -8715,53 +8705,24 @@
               "deprecationReason": null
             },
             {
-              "name": "date",
+              "name": "description",
               "description": null,
-              "args": [
-                {
-                  "name": "formatString",
-                  "description": "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "fromNow",
-                  "description": "Returns a string generated with Moment.js' `fromNow` function",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "Boolean",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "difference",
-                  "description": "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "locale",
-                  "description": "Configures the locale Moment.js will use to format the date.",
-                  "type": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                }
-              ],
+              "args": [],
               "type": {
                 "kind": "SCALAR",
-                "name": "Date",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "address",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -8786,30 +8747,6 @@
               "type": {
                 "kind": "OBJECT",
                 "name": "File",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "description",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "address",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
                 "ofType": null
               },
               "isDeprecated": false,
@@ -10383,7 +10320,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childrenMdx___frontmatter___date",
+              "name": "childrenMdx___frontmatter___description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "childrenMdx___frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -10845,18 +10788,6 @@
               "deprecationReason": null
             },
             {
-              "name": "childrenMdx___frontmatter___description",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "childrenMdx___frontmatter___address",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "childrenMdx___frontmatter___template",
               "description": null,
               "isDeprecated": false,
@@ -11199,7 +11130,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childMdx___frontmatter___date",
+              "name": "childMdx___frontmatter___description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "childMdx___frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -11656,18 +11593,6 @@
             },
             {
               "name": "childMdx___frontmatter___banner___children",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "childMdx___frontmatter___description",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "childMdx___frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -15571,16 +15496,6 @@
               "defaultValue": null
             },
             {
-              "name": "blogItemsPerPage",
-              "description": "",
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "IntQueryOperatorInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
               "name": "portfolioItemsPerPage",
               "description": "",
               "type": {
@@ -16358,18 +16273,6 @@
               "deprecationReason": null
             },
             {
-              "name": "blogItemsPerPage",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "portfolioItemsPerPage",
               "description": null,
               "args": [],
@@ -16992,12 +16895,6 @@
             },
             {
               "name": "siteMetadata___author",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "siteMetadata___blogItemsPerPage",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -22690,7 +22587,13 @@
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___date",
+              "name": "frontmatter___description",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -23651,18 +23554,6 @@
             },
             {
               "name": "frontmatter___banner___internal___type",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "frontmatter___description",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "frontmatter___address",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

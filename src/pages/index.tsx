@@ -225,27 +225,5 @@ export const query = graphql`
 				}
 			}
 		}
-		blog: allMdx(filter: { fields: { sourceName: { eq: "blog" } } }, limit: 6) {
-			edges {
-				node {
-					id
-					frontmatter {
-						title
-						description
-						date(formatString: "DD MMMM YYYY")
-						image {
-							childImageSharp {
-								fluid(maxWidth: 1000) {
-									...GatsbyImageSharpFluid
-								}
-							}
-						}
-					}
-					fields {
-						slug
-					}
-				}
-			}
-		}
 	}
 `

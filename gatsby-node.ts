@@ -37,13 +37,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 					}
 				}
 			}
-			blog: allMdx(filter: { fields: { sourceName: { eq: "blog" } } }) {
-				edges {
-					node {
-						id
-					}
-				}
-			}
 			portfolio: allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }) {
 				edges {
 					node {
@@ -53,7 +46,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 			}
 			limitPost: site {
 				siteMetadata {
-					blogItemsPerPage
 					portfolioItemsPerPage
 				}
 			}
@@ -66,23 +58,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 				component: path.resolve('./src/templates/' + template + '.tsx'),
 				context: {
 					slug: node.fields.slug,
-				},
-			})
-		})
-
-		const blogPosts = result.data.blog.edges
-		const blogPostsPerPage = result.data.limitPost.siteMetadata.blogItemsPerPage
-		const numBlogPages = Math.ceil(blogPosts.length / blogPostsPerPage)
-
-		Array.from({ length: numBlogPages }).forEach((_, i) => {
-			createPage({
-				path: i === 0 ? '/blog' : `/blog/${i + 1}`,
-				component: path.resolve('./src/templates/blog-list.tsx'),
-				context: {
-					limit: blogPostsPerPage,
-					skip: i * blogPostsPerPage,
-					numPages: numBlogPages,
-					currentPage: i + 1,
 				},
 			})
 		})
