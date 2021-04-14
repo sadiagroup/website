@@ -6,7 +6,7 @@ import { Form, Description } from '../components/contact'
 import { ContactQuery } from './__generated__/ContactQuery'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export default ({ data, location }: PageProps<ContactQuery>) => {
+const Contact = ({ data, location }: PageProps<ContactQuery>) => {
 	const api_url = data.site.siteMetadata.contact.api_url
 	const hasContactForm = api_url
 	return (
@@ -45,3 +45,5 @@ export const query = graphql`
 		}
 	}
 `
+
+export default Contact

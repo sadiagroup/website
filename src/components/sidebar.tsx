@@ -12,7 +12,11 @@ type SideBarState = {
 	screenWidth?: number
 }
 type SettingsProps = { sensitivity?: number; overlayColor?: string; sidebarWidth?: string; swipeDistance?: number }
-type SideBarProps = { settings?: SettingsProps; open: boolean; onChange: Function }
+type SideBarProps = {
+	settings?: SettingsProps
+	open: boolean
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
 
 export default class SideBar extends React.Component<SideBarProps, SideBarState> {
 	sidebarParent: React.RefObject<HTMLDivElement>
@@ -20,7 +24,7 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
 	open: boolean
 	settings: SettingsProps
 
-	constructor(props) {
+	constructor(props: SideBarProps) {
 		super(props)
 
 		this.state = {

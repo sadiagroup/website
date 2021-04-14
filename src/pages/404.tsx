@@ -2,7 +2,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import { PageProps } from 'gatsby'
 
-export default ({ location }: PageProps<{}, {}>) => {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+const NotFoundPage = ({ location }: PageProps<Record<string, unknown>, Record<string, unknown>>) => {
 	return (
 		<Layout
 			seo={{
@@ -38,3 +39,5 @@ export default ({ location }: PageProps<{}, {}>) => {
 		</Layout>
 	)
 }
+
+export default NotFoundPage

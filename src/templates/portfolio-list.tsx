@@ -5,7 +5,7 @@ import PortfolioItem from '../components/item-portfolio'
 import Pagination from '../components/pagination'
 import { PortfolioListQuery } from './__generated__/PortfolioListQuery'
 
-export default function portfolioList({
+export default function PortfolioList({
 	data,
 	pageContext,
 	location,

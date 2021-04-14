@@ -15,7 +15,7 @@ const ListItem = ({ data }) => {
 	)
 }
 
-export default () => {
+const SocialLinks = () => {
 	const data = useStaticQuery(graphql`
 		query SocialQuery {
 			site {
@@ -34,3 +34,5 @@ export default () => {
 	const list = items.map((e, i) => <ListItem key={e.url + '-' + e.icon + '-' + i} data={e} />)
 	return <ul className="mt-4">{list}</ul>
 }
+
+export default SocialLinks
