@@ -3,7 +3,7 @@
 [![Status of the Website](https://img.shields.io/website?logo=linode&style=flat-square&url=https%3A%2F%2Fwww.sadiatextile.com)](https://www.sadiatextile.com)
 [![Status of Staging on Netlify](https://img.shields.io/netlify/d69d3e64-54ba-49d2-8b8a-10054b7b3c4a?label=staging&logo=netlify&style=flat-square)](https://app.netlify.com/sites/sadiagroup/deploys)
 
-## 🧑🏽‍💻 Technology Stack
+## 🖥 Technology Stack
 
 - React.js
 - Gatsby.js
