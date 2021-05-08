@@ -4,7 +4,7 @@ import { Logo } from './utils'
 import Navlinks from './navigation-list'
 import { FooterLinksQuery, FooterLinksQuery_site_siteMetadata_footerLinks } from './__generated__/FooterLinksQuery'
 
-const Footer = function() {
+const Footer = function () {
 	const query = useStaticQuery<FooterLinksQuery>(graphql`
 		query FooterLinksQuery {
 			site {

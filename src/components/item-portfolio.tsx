@@ -42,7 +42,6 @@ export const ItemPortfolio: React.FC<ItemPortfolioProps> = ({ data, even }) => {
 		transform.current = Math.min(getWindowHeight() / 2, 300) * Math.max(0, state.percentage - percentageThreshold)
 
 		if (getWindowWidth() < 1024) updateState({ animated: true })
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [state.percentage])
 
 	if (state.percentage > percentageThreshold && !state.animated) updateState({ animated: true })

@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 import React from 'react'
 
 type SideBarState = {
@@ -108,7 +109,7 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
 		}
 	}
 
-	touchEnd = e => {
+	touchEnd = () => {
 		if (this.state.touchDown) {
 			if (this.state.progress > 80) {
 				this.openSidebar()

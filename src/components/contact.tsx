@@ -36,14 +36,13 @@ const Form: React.FC<{ api: string }> = ({ api }) => {
 					setFeedback({})
 					axios
 						.post(api, validate.data, { headers: { 'content-type': 'application/json' } })
-						.then(res => {
+						.then(_ => {
 							setFeedback({
 								4: {
 									type: 'success',
 									message: 'Your message has been sent.',
 								},
 							})
-							console.log(res)
 						})
 						.catch(err => {
 							setFeedback({

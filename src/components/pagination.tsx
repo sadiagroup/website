@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { ChevronLeft, ChevronRight } from 'react-feather'
 
-export default function({ pageContext, type }) {
+export default function ({ pageContext, type }) {
 	if (pageContext.numPages > 1) {
 		const listItems = Array.from({ length: pageContext.numPages }).map((_, p) => (
 			<Item type={type} currentPage={pageContext.currentPage} page={p + 1} key={`p-b-i-${p}`} />

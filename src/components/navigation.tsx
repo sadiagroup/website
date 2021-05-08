@@ -25,7 +25,6 @@ const Navbar: React.FC<NavbarProps> = ({
 	switchTheme,
 	themes,
 	allowThemeSwitch = true,
-	front,
 }) => {
 	const currentLocation = location.pathname.split('/')[1]
 

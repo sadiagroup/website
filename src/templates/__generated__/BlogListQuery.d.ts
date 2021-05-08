@@ -8,59 +8,59 @@
 // ====================================================
 
 export interface BlogListQuery_allMdx_edges_node_frontmatter_image_childImageSharp_fluid {
-  srcSet: string;
-  base64: string | null;
-  aspectRatio: number;
-  src: string;
-  sizes: string;
+	srcSet: string
+	base64: string | null
+	aspectRatio: number
+	src: string
+	sizes: string
 }
 
 export interface BlogListQuery_allMdx_edges_node_frontmatter_image_childImageSharp {
-  fluid: BlogListQuery_allMdx_edges_node_frontmatter_image_childImageSharp_fluid | null;
-  id: string;
+	fluid: BlogListQuery_allMdx_edges_node_frontmatter_image_childImageSharp_fluid | null
+	id: string
 }
 
 export interface BlogListQuery_allMdx_edges_node_frontmatter_image {
-  /**
-   * Copy file to static directory and return public url to it
-   */
-  publicURL: string | null;
-  /**
-   * Returns the first child node of type ImageSharp or null if there are no children of given type on this node
-   */
-  childImageSharp: BlogListQuery_allMdx_edges_node_frontmatter_image_childImageSharp | null;
+	/**
+	 * Copy file to static directory and return public url to it
+	 */
+	publicURL: string | null
+	/**
+	 * Returns the first child node of type ImageSharp or null if there are no children of given type on this node
+	 */
+	childImageSharp: BlogListQuery_allMdx_edges_node_frontmatter_image_childImageSharp | null
 }
 
 export interface BlogListQuery_allMdx_edges_node_frontmatter {
-  title: string;
-  description: string | null;
-  date: any | null;
-  image: BlogListQuery_allMdx_edges_node_frontmatter_image | null;
+	title: string
+	description: string | null
+	date: any | null
+	image: BlogListQuery_allMdx_edges_node_frontmatter_image | null
 }
 
 export interface BlogListQuery_allMdx_edges_node_fields {
-  slug: string | null;
+	slug: string | null
 }
 
 export interface BlogListQuery_allMdx_edges_node {
-  id: string;
-  frontmatter: BlogListQuery_allMdx_edges_node_frontmatter | null;
-  fields: BlogListQuery_allMdx_edges_node_fields | null;
+	id: string
+	frontmatter: BlogListQuery_allMdx_edges_node_frontmatter | null
+	fields: BlogListQuery_allMdx_edges_node_fields | null
 }
 
 export interface BlogListQuery_allMdx_edges {
-  node: BlogListQuery_allMdx_edges_node;
+	node: BlogListQuery_allMdx_edges_node
 }
 
 export interface BlogListQuery_allMdx {
-  edges: BlogListQuery_allMdx_edges[];
+	edges: BlogListQuery_allMdx_edges[]
 }
 
 export interface BlogListQuery {
-  allMdx: BlogListQuery_allMdx;
+	allMdx: BlogListQuery_allMdx
 }
 
 export interface BlogListQueryVariables {
-  skip: number;
-  limit: number;
+	skip: number
+	limit: number
 }
