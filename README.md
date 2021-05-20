@@ -7,8 +7,8 @@
 
 - React.js
 - Gatsby.js
+- Tailwind CSS
 - TypeScript
-- Yarn
 
 ## 🏁 Getting Started
 
